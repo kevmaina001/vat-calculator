@@ -211,34 +211,65 @@ export default function VATCalculator() {
       {/* Popular Countries Section */}
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Popular VAT Calculators</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a 
-            href="/vat/germany"
-            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+            href="./vat/germany"
+            className="block p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-200 transition-colors border border-blue-200 group"
           >
-            <h3 className="font-semibold text-blue-900 mb-1">Germany</h3>
-            <p className="text-sm text-blue-700">19% / 7%</p>
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-lg font-bold text-blue-900 group-hover:text-blue-800">🇩🇪 Germany VAT</h3>
+              <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full font-medium">Most Popular</span>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm text-blue-800"><strong>Standard:</strong> 19% (most goods & services)</p>
+              <p className="text-sm text-blue-700"><strong>Reduced:</strong> 7% (books, food, newspapers)</p>
+              <p className="text-xs text-blue-600 mt-3">Click to calculate German VAT with preselected rates →</p>
+            </div>
           </a>
+
           <a 
-            href="/vat/france"
-            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+            href="./vat/france"
+            className="block p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:from-purple-100 hover:to-purple-200 transition-colors border border-purple-200 group"
           >
-            <h3 className="font-semibold text-blue-900 mb-1">France</h3>
-            <p className="text-sm text-blue-700">20% / 10% / 5.5%</p>
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-lg font-bold text-purple-900 group-hover:text-purple-800">🇫🇷 France VAT (TVA)</h3>
+              <span className="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded-full font-medium">4 Rates</span>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm text-purple-800"><strong>Standard:</strong> 20% (most goods & services)</p>
+              <p className="text-sm text-purple-700"><strong>Others:</strong> 10% hotels, 5.5% food, 2.1% medicines</p>
+              <p className="text-xs text-purple-600 mt-3">Calculate French TVA with all rate options →</p>
+            </div>
           </a>
+
           <a 
-            href="/vat/finland"
-            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+            href="./vat/finland"
+            className="block p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-colors border border-green-200 group"
           >
-            <h3 className="font-semibold text-blue-900 mb-1">Finland</h3>
-            <p className="text-sm text-blue-700">24% / 14% / 10%</p>
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-lg font-bold text-green-900 group-hover:text-green-800">🇫🇮 Finland VAT (ALV)</h3>
+              <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full font-medium">Highest EU</span>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm text-green-800"><strong>Standard:</strong> 24% (highest in EU)</p>
+              <p className="text-sm text-green-700"><strong>Reduced:</strong> 14% food, 10% books & medicines</p>
+              <p className="text-xs text-green-600 mt-3">Calculate Finnish ALV with Nordic rates →</p>
+            </div>
           </a>
+
           <a 
-            href="/vat/ke"
-            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+            href="./vat/ke"
+            className="block p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:from-orange-100 hover:to-orange-200 transition-colors border border-orange-200 group"
           >
-            <h3 className="font-semibold text-blue-900 mb-1">Kenya</h3>
-            <p className="text-sm text-blue-700">16% / 8%</p>
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-lg font-bold text-orange-900 group-hover:text-orange-800">🇰🇪 Kenya VAT</h3>
+              <span className="text-xs bg-orange-200 text-orange-800 px-2 py-1 rounded-full font-medium">KES Currency</span>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm text-orange-800"><strong>Standard:</strong> 16% (most goods & services)</p>
+              <p className="text-sm text-orange-700"><strong>Essential:</strong> 8% (food, agricultural inputs)</p>
+              <p className="text-xs text-orange-600 mt-3">Calculate Kenyan VAT in KES currency →</p>
+            </div>
           </a>
         </div>
       </div>
