@@ -6,6 +6,7 @@ import { VATCalculation, CalculationDirection } from '@/types/vat';
 import { calculateVAT, formatCurrency } from '@/lib/vat-calculator';
 import { getAllCountries, getAvailableRates, getCountryByCode } from '@/lib/vat-data';
 import { trackVATCalculation, trackCopyResults, trackShareLink } from '@/lib/gtag';
+import { Link } from '@/i18n/routing';
 import AdSense from './AdSense';
 
 export default function VATCalculator() {
@@ -212,8 +213,8 @@ export default function VATCalculator() {
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Popular VAT Calculators</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a 
-            href="./vat/germany"
+          <Link 
+            href="/vat/germany"
             className="block p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-200 transition-colors border border-blue-200 group"
           >
             <div className="flex items-start justify-between mb-3">
@@ -225,10 +226,10 @@ export default function VATCalculator() {
               <p className="text-sm text-blue-700"><strong>Reduced:</strong> 7% (books, food, newspapers)</p>
               <p className="text-xs text-blue-600 mt-3">Click to calculate German VAT with preselected rates →</p>
             </div>
-          </a>
+          </Link>
 
-          <a 
-            href="./vat/france"
+          <Link 
+            href="/vat/france"
             className="block p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:from-purple-100 hover:to-purple-200 transition-colors border border-purple-200 group"
           >
             <div className="flex items-start justify-between mb-3">
@@ -240,10 +241,10 @@ export default function VATCalculator() {
               <p className="text-sm text-purple-700"><strong>Others:</strong> 10% hotels, 5.5% food, 2.1% medicines</p>
               <p className="text-xs text-purple-600 mt-3">Calculate French TVA with all rate options →</p>
             </div>
-          </a>
+          </Link>
 
-          <a 
-            href="./vat/finland"
+          <Link 
+            href="/vat/finland"
             className="block p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-colors border border-green-200 group"
           >
             <div className="flex items-start justify-between mb-3">
@@ -255,10 +256,10 @@ export default function VATCalculator() {
               <p className="text-sm text-green-700"><strong>Reduced:</strong> 14% food, 10% books & medicines</p>
               <p className="text-xs text-green-600 mt-3">Calculate Finnish ALV with Nordic rates →</p>
             </div>
-          </a>
+          </Link>
 
-          <a 
-            href="./vat/ke"
+          <Link 
+            href="/vat/ke"
             className="block p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:from-orange-100 hover:to-orange-200 transition-colors border border-orange-200 group"
           >
             <div className="flex items-start justify-between mb-3">
@@ -270,7 +271,7 @@ export default function VATCalculator() {
               <p className="text-sm text-orange-700"><strong>Essential:</strong> 8% (food, agricultural inputs)</p>
               <p className="text-xs text-orange-600 mt-3">Calculate Kenyan VAT in KES currency →</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 

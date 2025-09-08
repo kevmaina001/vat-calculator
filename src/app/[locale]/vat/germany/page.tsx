@@ -50,35 +50,152 @@ export default async function GermanyVATPage() {
           preselectedRate={19}
         />
 
-        {/* How It Works Section */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">How the Germany VAT Calculator Works</h2>
-          <p className="text-gray-700 mb-4">
-            Enter the amount, pick Germany and the VAT rate. For Net → Gross, VAT = Net × Rate; Gross = Net + VAT. 
-            For Gross → Net, Net = Gross ÷ (1 + Rate); VAT = Gross − Net. Results round to 2 decimals for currency accuracy.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">German VAT Rates</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li><strong>19% Standard Rate:</strong> Most goods and services</li>
-                <li><strong>7% Reduced Rate:</strong> Books, food, newspapers, cultural events</li>
-                <li><strong>0% Zero-Rated:</strong> Exports, intra-EU supplies</li>
+        {/* Comprehensive Germany VAT Guide */}
+        <article className="bg-white rounded-lg shadow-lg p-8 mt-6">
+          <div className="prose max-w-none">
+            <p className="text-xl text-gray-700 mb-6">
+              Germany operates one of Europe's most straightforward VAT (Mehrwertsteuer) systems with a standard rate of 19% 
+              and reduced rate of 7%. This comprehensive guide covers everything you need to calculate German VAT correctly.
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">German VAT Rates 2025</h2>
+            
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-3">Current Rates (Mehrwertsteuersätze)</h3>
+              <ul className="space-y-2">
+                <li><strong>Standard Rate (Regelsteuersatz):</strong> 19% (most goods and services)</li>
+                <li><strong>Reduced Rate (Ermäßigter Steuersatz):</strong> 7% (essential goods)</li>
+                <li><strong>Zero-Rated:</strong> 0% (exports and intra-EU supplies)</li>
+                <li><strong>Exempt:</strong> No VAT applicable (certain financial services)</li>
               </ul>
             </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">What Gets the 7% Rate?</h2>
+            <p>The reduced 7% VAT rate (ermäßigter Steuersatz) applies to essential goods and services including:</p>
+            <ul className="list-disc list-inside space-y-2 mb-6">
+              <li><strong>Food products:</strong> Basic foodstuffs, non-alcoholic beverages</li>
+              <li><strong>Books & media:</strong> Books, newspapers, magazines, e-books</li>
+              <li><strong>Public transport:</strong> Local and long-distance passenger transport</li>
+              <li><strong>Cultural events:</strong> Theater, concerts, museums, zoos</li>
+              <li><strong>Hotel accommodation:</strong> Short-term lodging (not luxury hotels)</li>
+              <li><strong>Medical services:</strong> Certain medical equipment and supplies</li>
+              <li><strong>Agriculture:</strong> Plants, seeds, fertilizers for food production</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Zero-Rated & Exempt Items</h2>
             
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Calculation Examples</h3>
-              <div className="space-y-2 text-gray-700">
-                <p><strong>Net €100.00 at 19%:</strong></p>
-                <p>VAT = €19.00, Gross = €119.00</p>
-                <p><strong>Gross €119.00 remove VAT:</strong></p>
-                <p>Net = €100.00, VAT = €19.00</p>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Zero-Rated (0%)</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Exports to non-EU countries</li>
+                  <li>Intra-EU supplies to VAT-registered businesses</li>
+                  <li>International transport services</li>
+                  <li>Ships and aircraft for commercial use</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">VAT-Exempt</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Banking and insurance services</li>
+                  <li>Medical and dental care</li>
+                  <li>Educational services</li>
+                  <li>Postal services (basic)</li>
+                </ul>
               </div>
             </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Calculation Examples</h2>
+
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-4">Example 1: Standard Rate (19%)</h3>
+              <p className="mb-2"><strong>Scenario:</strong> Selling electronics for €500.00 (net price)</p>
+              <div className="space-y-2">
+                <p>Net amount: €500.00</p>
+                <p>VAT (19%): €500.00 × 0.19 = €95.00</p>
+                <p className="font-semibold">Gross amount: €500.00 + €95.00 = €595.00</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-4">Example 2: Reduced Rate (7%)</h3>
+              <p className="mb-2"><strong>Scenario:</strong> Selling books for €50.00 (net price)</p>
+              <div className="space-y-2">
+                <p>Net amount: €50.00</p>
+                <p>VAT (7%): €50.00 × 0.07 = €3.50</p>
+                <p className="font-semibold">Gross amount: €50.00 + €3.50 = €53.50</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Converting Gross to Net</h2>
+            <p>When you have a gross amount and need to extract the VAT:</p>
+
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-4">Formula for 19% VAT</h3>
+              <ul className="space-y-2">
+                <li>Net = Gross ÷ 1.19</li>
+                <li>VAT = Gross - Net</li>
+              </ul>
+              <p className="mt-4"><strong>Example:</strong> Gross price €119.00</p>
+              <div className="space-y-2">
+                <p>Net: €119.00 ÷ 1.19 = €100.00</p>
+                <p>VAT: €119.00 - €100.00 = €19.00</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-4">Formula for 7% VAT</h3>
+              <ul className="space-y-2">
+                <li>Net = Gross ÷ 1.07</li>
+                <li>VAT = Gross - Net</li>
+              </ul>
+              <p className="mt-4"><strong>Example:</strong> Gross price €107.00</p>
+              <div className="space-y-2">
+                <p>Net: €107.00 ÷ 1.07 = €100.00</p>
+                <p>VAT: €107.00 - €100.00 = €7.00</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">VAT Registration in Germany</h2>
+            <p className="mb-4">
+              Businesses must register for VAT (Umsatzsteuer-Identifikationsnummer) if their annual turnover exceeds €22,000. 
+              Key points:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mb-6">
+              <li>Mandatory registration above €22,000 annual turnover</li>
+              <li>Small business exemption (Kleinunternehmerregelung) available under €22,000</li>
+              <li>Monthly or quarterly VAT returns (Umsatzsteuervoranmeldung)</li>
+              <li>Annual VAT declaration (Umsatzsteuererklärung) required</li>
+              <li>Input VAT deduction available for business expenses</li>
+            </ul>
+
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+              <h3 className="text-xl font-semibold mb-3">💡 Pro Tip</h3>
+              <p>Use our Germany VAT Calculator above for instant, accurate calculations with 19% and 7% rates. Perfect for German businesses, freelancers, and international companies dealing with German customers.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Important Considerations</h2>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6">
+              <ul className="list-disc list-inside space-y-2">
+                <li>VAT is charged on most supplies of goods and services in Germany</li>
+                <li>Input VAT (Vorsteuer) can be deducted from output VAT</li>
+                <li>Digital services to German consumers require German VAT registration</li>
+                <li>Always verify current rates with German tax authorities (Bundesfinanzministerium)</li>
+                <li>Brexit affects UK-Germany trade VAT treatment</li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Key Takeaways</h2>
+            <ul className="list-disc list-inside space-y-2 mb-6">
+              <li>Germany uses 19% standard VAT and 7% reduced VAT rates</li>
+              <li>Essential goods like food and books qualify for 7% rate</li>
+              <li>Exports and intra-EU B2B supplies are zero-rated (0%)</li>
+              <li>VAT registration is mandatory above €22,000 turnover</li>
+              <li>Use proper formulas when converting between net and gross amounts</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
         {/* Ad Space Below Results */}
         <div className="mt-6">
