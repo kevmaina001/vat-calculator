@@ -1,0 +1,245 @@
+[
+  {
+    "country": "Germany",
+    "code": "DE",
+    "currency": "EUR",
+    "standard_rate": 19,
+    "reduced_rates": [7],
+    "notes": "Books, food, and certain services: 7%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "France",
+    "code": "FR",
+    "currency": "EUR",
+    "standard_rate": 20,
+    "reduced_rates": [10, 5.5, 2.1],
+    "notes": "Food 5.5%, books 5.5%, medicines 2.1%, accommodation 10%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Spain",
+    "code": "ES",
+    "currency": "EUR",
+    "standard_rate": 21,
+    "reduced_rates": [10, 4],
+    "notes": "Food 4%, books 4%, transport 10%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Italy",
+    "code": "IT",
+    "currency": "EUR",
+    "standard_rate": 22,
+    "reduced_rates": [10, 5, 4],
+    "notes": "Food 4%, books 4%, tourism 10%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Netherlands",
+    "code": "NL",
+    "currency": "EUR",
+    "standard_rate": 21,
+    "reduced_rates": [9],
+    "notes": "Food, books, medicines, transport: 9%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Austria",
+    "code": "AT",
+    "currency": "EUR",
+    "standard_rate": 20,
+    "reduced_rates": [10, 13],
+    "notes": "Food 10%, books 10%, tourism 13%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Belgium",
+    "code": "BE",
+    "currency": "EUR",
+    "standard_rate": 21,
+    "reduced_rates": [6, 12],
+    "notes": "Food 6%, medicines 6%, energy 6%, transport 12%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Poland",
+    "code": "PL",
+    "currency": "PLN",
+    "standard_rate": 23,
+    "reduced_rates": [8, 5],
+    "notes": "Food 5%, books 5%, medicines 8%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Czech Republic",
+    "code": "CZ",
+    "currency": "CZK",
+    "standard_rate": 21,
+    "reduced_rates": [12, 10],
+    "notes": "Food 12%, medicines 10%, books 10%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Portugal",
+    "code": "PT",
+    "currency": "EUR",
+    "standard_rate": 23,
+    "reduced_rates": [6, 13],
+    "notes": "Food 6%, medicines 6%, restaurants 13%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Sweden",
+    "code": "SE",
+    "currency": "SEK",
+    "standard_rate": 25,
+    "reduced_rates": [12, 6],
+    "notes": "Food 12%, books 6%, transport 6%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Denmark",
+    "code": "DK",
+    "currency": "DKK",
+    "standard_rate": 25,
+    "reduced_rates": [],
+    "notes": "Single rate system - no reduced rates",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Finland",
+    "code": "FI",
+    "currency": "EUR",
+    "standard_rate": 24,
+    "reduced_rates": [14, 10],
+    "notes": "Food 14%, books 10%, medicines 10%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Ireland",
+    "code": "IE",
+    "currency": "EUR",
+    "standard_rate": 23,
+    "reduced_rates": [13.5, 9, 4.8, 0],
+    "notes": "Food 0%, books 0%, energy 13.5%, tourism 9%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Luxembourg",
+    "code": "LU",
+    "currency": "EUR",
+    "standard_rate": 17,
+    "reduced_rates": [8, 3],
+    "notes": "Food 3%, medicines 3%, energy 8%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Kenya",
+    "code": "KE",
+    "currency": "KES",
+    "standard_rate": 16,
+    "reduced_rates": [8, 0],
+    "notes": "Essential goods 8%, exports 0%, exempt items include basic food items",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "South Africa",
+    "code": "ZA",
+    "currency": "ZAR",
+    "standard_rate": 15,
+    "reduced_rates": [0],
+    "notes": "Zero-rated: basic food items, exports, certain services",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Nigeria",
+    "code": "NG",
+    "currency": "NGN",
+    "standard_rate": 7.5,
+    "reduced_rates": [0],
+    "notes": "Zero-rated: exports, basic food items, medical products",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Ghana",
+    "code": "GH",
+    "currency": "GHS",
+    "standard_rate": 15,
+    "reduced_rates": [3, 0],
+    "notes": "Reduced rate 3% for certain goods, zero-rated exports",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Morocco",
+    "code": "MA",
+    "currency": "MAD",
+    "standard_rate": 20,
+    "reduced_rates": [14, 10, 7, 0],
+    "notes": "Luxury goods 20%, standard goods 14%, basic goods 10%, essential items 7%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Canada",
+    "code": "CA",
+    "currency": "CAD",
+    "standard_rate": 5,
+    "reduced_rates": [0],
+    "notes": "GST 5% (federal), additional PST varies by province (0-10%)",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "United States",
+    "code": "US",
+    "currency": "USD",
+    "standard_rate": 0,
+    "reduced_rates": [],
+    "notes": "No federal VAT/GST. State sales tax varies 0-11%, calculated differently",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Mexico",
+    "code": "MX",
+    "currency": "MXN",
+    "standard_rate": 16,
+    "reduced_rates": [0, 8],
+    "notes": "Border areas 8%, zero-rated exports, books, medicines",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Brazil",
+    "code": "BR",
+    "currency": "BRL",
+    "standard_rate": 18,
+    "reduced_rates": [12, 7, 0],
+    "notes": "Complex system with ICMS varying by state, reduced rates for essentials",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Argentina",
+    "code": "AR",
+    "currency": "ARS",
+    "standard_rate": 21,
+    "reduced_rates": [10.5, 2.5, 0],
+    "notes": "Essential goods 10.5%, basic necessities 2.5%, exports 0%",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Chile",
+    "code": "CL",
+    "currency": "CLP",
+    "standard_rate": 19,
+    "reduced_rates": [0],
+    "notes": "Zero-rated exports, most services subject to 19% IVA",
+    "last_updated": "2025-09-01"
+  },
+  {
+    "country": "Colombia",
+    "code": "CO",
+    "currency": "COP",
+    "standard_rate": 19,
+    "reduced_rates": [5, 0],
+    "notes": "Reduced rate 5% for basic goods, zero-rated exports and essentials",
+    "last_updated": "2025-09-01"
+  }
+]
