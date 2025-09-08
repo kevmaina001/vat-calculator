@@ -7,6 +7,10 @@ import { Link } from '@/i18n/routing';
 export default function Header() {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const handleMobileMenuClose = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
@@ -14,13 +18,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Link href="/" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg">
                 <span className="text-white font-bold text-lg">%</span>
               </div>
-              <div>
-                <span className="text-xl font-bold text-gray-900">Global VAT</span>
-                <span className="text-sm text-gray-500 block leading-none">Calculator</span>
+              <div className="transition-colors duration-300 group-hover:text-blue-600">
+                <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600">Global VAT</span>
+                <span className="text-sm text-gray-500 block leading-none group-hover:text-blue-500">Calculator</span>
               </div>
             </Link>
           </div>
@@ -29,17 +33,19 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 hover:shadow-sm px-3 py-2 rounded-lg hover:bg-blue-50 relative overflow-hidden group"
             >
-              Calculator
+              <span className="relative z-10">Calculator</span>
+              <div className="absolute inset-0 bg-blue-100 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
             </Link>
             
             <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                Countries
-                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 relative overflow-hidden">
+                <span className="relative z-10">Countries</span>
+                <svg className="ml-1 w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
+                <div className="absolute inset-0 bg-blue-100 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
               </button>
               
               {/* Dropdown Menu */}
@@ -133,9 +139,9 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-300 hover:scale-105 transform"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -148,33 +154,65 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div className="md:hidden border-t border-gray-200 py-4 animate-slide-down">
             <div className="space-y-1">
-              <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+              <Link 
+                href="/" 
+                onClick={handleMobileMenuClose}
+                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-sm transform active:scale-95"
+              >
                 Calculator
               </Link>
-              <Link href="/blog" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+              <Link 
+                href="/blog" 
+                onClick={handleMobileMenuClose}
+                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-sm transform active:scale-95"
+              >
                 Guides
               </Link>
-              <Link href="/faq" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+              <Link 
+                href="/faq" 
+                onClick={handleMobileMenuClose}
+                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-sm transform active:scale-95"
+              >
                 FAQ
               </Link>
-              <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+              <Link 
+                href="/about" 
+                onClick={handleMobileMenuClose}
+                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-sm transform active:scale-95"
+              >
                 About
               </Link>
               
               <div className="pt-4 border-t border-gray-200 mt-4">
-                <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Popular Countries</div>
-                <Link href="/vat/germany" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+                <div className="px-3 py-2 text-xs font-semibold text-gray-600 uppercase tracking-wide">Popular Countries</div>
+                <Link 
+                  href="/vat/germany" 
+                  onClick={handleMobileMenuClose}
+                  className="block px-3 py-2 text-sm text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 transform active:scale-95"
+                >
                   🇩🇪 Germany
                 </Link>
-                <Link href="/vat/france" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+                <Link 
+                  href="/vat/france" 
+                  onClick={handleMobileMenuClose}
+                  className="block px-3 py-2 text-sm text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 transform active:scale-95"
+                >
                   🇫🇷 France
                 </Link>
-                <Link href="/vat/finland" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+                <Link 
+                  href="/vat/finland" 
+                  onClick={handleMobileMenuClose}
+                  className="block px-3 py-2 text-sm text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 transform active:scale-95"
+                >
                   🇫🇮 Finland
                 </Link>
-                <Link href="/vat/ke" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+                <Link 
+                  href="/vat/ke" 
+                  onClick={handleMobileMenuClose}
+                  className="block px-3 py-2 text-sm text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-300 hover:scale-105 transform active:scale-95"
+                >
                   🇰🇪 Kenya
                 </Link>
               </div>

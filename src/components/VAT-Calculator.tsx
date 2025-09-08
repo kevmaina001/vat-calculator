@@ -83,7 +83,7 @@ export default function VATCalculator() {
                 id="amount"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 transition-all duration-300 hover:shadow-md focus:scale-105 text-base sm:text-sm"
                 placeholder="Enter amount"
                 min="0"
                 step="0.01"
@@ -98,7 +98,7 @@ export default function VATCalculator() {
                 id="country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 transition-all duration-300 hover:shadow-md focus:scale-105 text-base sm:text-sm cursor-pointer"
               >
                 {countries.map((c) => (
                   <option key={c.code} value={c.code}>
@@ -116,7 +116,7 @@ export default function VATCalculator() {
                 id="rate"
                 value={rate}
                 onChange={(e) => setRate(parseFloat(e.target.value))}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 transition-all duration-300 hover:shadow-md focus:scale-105 text-base sm:text-sm cursor-pointer"
               >
                 {availableRates.map((r) => (
                   <option key={r} value={r}>
@@ -179,18 +179,22 @@ export default function VATCalculator() {
                 <div className="flex space-x-2 mt-4">
                   <button
                     onClick={() => copyToClipboard(`Net: ${formatCurrency(result.net, selectedCountry?.currency)}, VAT: ${formatCurrency(result.vat, selectedCountry?.currency)}, Gross: ${formatCurrency(result.gross, selectedCountry?.currency)}`)}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300 text-sm transform hover:scale-105 hover:shadow-lg active:scale-95 animate-pulse-glow"
                   >
-                    {t('copyResults')}
+                    <span className="flex items-center">
+                      📋 {t('copyResults')}
+                    </span>
                   </button>
                   <button
                     onClick={() => {
                       copyToClipboard(getShareableUrl());
                       trackShareLink(country, rate);
                     }}
-                    className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors text-sm"
+                    className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-all duration-300 text-sm transform hover:scale-105 hover:shadow-lg active:scale-95"
                   >
-                    {t('shareLink')}
+                    <span className="flex items-center">
+                      🔗 {t('shareLink')}
+                    </span>
                   </button>
                 </div>
               </div>
@@ -215,7 +219,7 @@ export default function VATCalculator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link 
             href="/vat/germany"
-            className="block p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-200 transition-colors border border-blue-200 group"
+            className="block p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-200 transition-all duration-300 border border-blue-200 group transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 animate-bounce-in"
           >
             <div className="flex items-start justify-between mb-3">
               <h3 className="text-lg font-bold text-blue-900 group-hover:text-blue-800">🇩🇪 Germany VAT</h3>
@@ -230,7 +234,8 @@ export default function VATCalculator() {
 
           <Link 
             href="/vat/france"
-            className="block p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:from-purple-100 hover:to-purple-200 transition-colors border border-purple-200 group"
+            className="block p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:from-purple-100 hover:to-purple-200 transition-all duration-300 border border-purple-200 group transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 animate-bounce-in"
+            style={{ animationDelay: '0.1s' }}
           >
             <div className="flex items-start justify-between mb-3">
               <h3 className="text-lg font-bold text-purple-900 group-hover:text-purple-800">🇫🇷 France VAT (TVA)</h3>
@@ -245,7 +250,8 @@ export default function VATCalculator() {
 
           <Link 
             href="/vat/finland"
-            className="block p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-colors border border-green-200 group"
+            className="block p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-all duration-300 border border-green-200 group transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 animate-bounce-in"
+            style={{ animationDelay: '0.2s' }}
           >
             <div className="flex items-start justify-between mb-3">
               <h3 className="text-lg font-bold text-green-900 group-hover:text-green-800">🇫🇮 Finland VAT (ALV)</h3>
@@ -260,7 +266,8 @@ export default function VATCalculator() {
 
           <Link 
             href="/vat/ke"
-            className="block p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:from-orange-100 hover:to-orange-200 transition-colors border border-orange-200 group"
+            className="block p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:from-orange-100 hover:to-orange-200 transition-all duration-300 border border-orange-200 group transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 animate-bounce-in"
+            style={{ animationDelay: '0.3s' }}
           >
             <div className="flex items-start justify-between mb-3">
               <h3 className="text-lg font-bold text-orange-900 group-hover:text-orange-800">🇰🇪 Kenya VAT</h3>
