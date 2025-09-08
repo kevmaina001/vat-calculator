@@ -37,7 +37,7 @@ export default async function FinlandVATPage() {
         {/* Ad Space Above Calculator */}
         <div className="mb-6">
           <AdSense 
-            adSlot="1234567891"
+            adSlot="6300978111"
             width={728}
             height={90}
             className="mx-auto"
@@ -243,7 +243,7 @@ export default async function FinlandVATPage() {
         {/* Ad Space Below Results */}
         <div className="mt-6">
           <AdSense 
-            adSlot="1234567892"
+            adSlot="2014213617"
             width={728}
             height={250}
             className="mx-auto"
@@ -284,7 +284,7 @@ export default async function FinlandVATPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-2 z-50">
         <div className="max-w-4xl mx-auto text-center">
           <AdSense 
-            adSlot="1234567893"
+            adSlot="1033173712"
             width={320}
             height={50}
             className="mx-auto"

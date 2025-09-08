@@ -26,7 +26,8 @@ export default function AdSense({
   responsive = true,
   className = '' 
 }: AdSenseProps) {
-  const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  // Use test AdSense client ID for development
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-3940256099942544';
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -38,19 +39,8 @@ export default function AdSense({
     }
   }, []);
 
-  if (!adClient) {
-    // Development placeholder
-    return (
-      <div 
-        className={`bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-4 text-center text-gray-500 ${className}`}
-        style={{ width: responsive ? '100%' : width, height: height }}
-      >
-        <p>AdSense Placeholder</p>
-        <p className="text-sm">{width}x{height} {adFormat}</p>
-        <p className="text-xs">Slot: {adSlot}</p>
-      </div>
-    );
-  }
+  // Always show ads now that we have test client ID
+  // Remove the placeholder logic since we want to test real ad rendering
 
   return (
     <>

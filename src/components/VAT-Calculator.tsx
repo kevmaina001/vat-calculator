@@ -278,7 +278,7 @@ export default function VATCalculator() {
       {/* AdSense Banner */}
       <div className="mb-6">
         <AdSense 
-          adSlot="1234567890"
+          adSlot="6300978111"
           width={728}
           height={90}
           className="mx-auto"
