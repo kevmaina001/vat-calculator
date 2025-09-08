@@ -44,5 +44,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
+  // High-priority country pages with specific routes
+  const priorityCountries = ['germany', 'france', 'finland'];
+  priorityCountries.forEach(country => {
+    languages.forEach(lang => {
+      pages.push({
+        url: `${baseUrl}/${lang}/vat/${country}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+        alternates: {
+          languages: {
+            en: `${baseUrl}/en/vat/${country}`,
+            de: `${baseUrl}/de/vat/${country}`,
+            fr: `${baseUrl}/fr/vat/${country}`,
+          }
+        }
+      });
+    });
+  });
+
+  // Blog pages
+  const blogPosts = ['kenya-vat-guide', 'how-to-calculate-vat-germany'];
+  languages.forEach(lang => {
+    // Blog index
+    pages.push({
+      url: `${baseUrl}/${lang}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    });
+
+    // Blog posts
+    blogPosts.forEach(post => {
+      pages.push({
+        url: `${baseUrl}/${lang}/blog/${post}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      });
+    });
+  });
+
   return pages;
 }

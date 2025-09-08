@@ -208,6 +208,41 @@ export default function VATCalculator() {
         </div>
       </div>
 
+      {/* Popular Countries Section */}
+      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Popular VAT Calculators</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <a 
+            href="/vat/germany"
+            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 className="font-semibold text-blue-900 mb-1">Germany</h3>
+            <p className="text-sm text-blue-700">19% / 7%</p>
+          </a>
+          <a 
+            href="/vat/france"
+            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 className="font-semibold text-blue-900 mb-1">France</h3>
+            <p className="text-sm text-blue-700">20% / 10% / 5.5%</p>
+          </a>
+          <a 
+            href="/vat/finland"
+            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 className="font-semibold text-blue-900 mb-1">Finland</h3>
+            <p className="text-sm text-blue-700">24% / 14% / 10%</p>
+          </a>
+          <a 
+            href="/vat/ke"
+            className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 className="font-semibold text-blue-900 mb-1">Kenya</h3>
+            <p className="text-sm text-blue-700">16% / 8%</p>
+          </a>
+        </div>
+      </div>
+
       {/* AdSense Banner */}
       <div className="mb-6">
         <AdSense 
