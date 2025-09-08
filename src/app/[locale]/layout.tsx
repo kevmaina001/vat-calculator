@@ -5,6 +5,8 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Analytics from '@/components/Analytics';
 import ConsentBanner from '@/components/ConsentBanner';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -84,7 +86,9 @@ export default async function LocaleLayout({
       >
         <Analytics />
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
           <ConsentBanner />
         </NextIntlClientProvider>
       </body>
